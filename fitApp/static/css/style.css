@@ -1,0 +1,33 @@
+.video-container {
+    position: relative;
+    width: calc(100vw - 17px);
+    height: 100vh;
+    overflow-x: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.video-container video {
+    object-fit: cover;
+}
+
+.video-overlay {
+    z-index: 2;
+}
+
+.scroll-arrow img {
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
