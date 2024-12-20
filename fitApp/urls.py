@@ -23,7 +23,10 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('superuser/', views.show_superuser_name),
-    path('', views.show_index)
+    path('', views.show_index),
+    path('diet/', views.show_diet),
+    path('training/', views.show_training),
+    path('coaching/', views.show_coaching)
 ]
 
 if settings.DEBUG:

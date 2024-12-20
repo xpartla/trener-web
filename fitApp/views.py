@@ -8,3 +8,12 @@ def show_superuser_name(request):
 
 def show_index(request):
     return render(request, 'index.html')
+
+def show_diet(request):
+    return render(request, 'diet.html')
+
+def show_training(request):
+    return render(request, 'training.html')
+
+def show_coaching(request):
+    return render(request, 'coaching.html')
