@@ -1,0 +1,23 @@
+# Core Django requirements
+Django>=4.2,<5.0
+psycopg2>=2.9
+
+# Optional: For user management
+django-allauth>=0.44
+
+# Optional: Static file management in production
+whitenoise>=6.0
+
+# Optional: Asynchronous task management
+celery>=5.3
+redis>=4.3
+
+# Optional: API development
+djangorestframework>=3.14
+
+# Optional: Debugging and development tools
+django-debug-toolbar>=4.0
+
+# Optional: Testing
+pytest>=7.4
+pytest-django>=4.6

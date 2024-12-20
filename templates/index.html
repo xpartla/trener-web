@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Index Page
+{% endblock %}
+
+{% block content %}
+    <div class="video-container position-relative">
+        <!-- Background Video -->
+        <video autoplay muted loop class="w-100 h-100 position-absolute top-0 start-0" style="object-fit: cover;">
+            <source src="{% static 'images/homepage_bg.mp4' %}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Call-to-Action Banner -->
+        <div class="video-overlay text-center position-absolute top-50 start-50 translate-middle">
+            <h1 class="text-white display-4">Welcome to MyApp</h1>
+            <p class="text-white lead">Explore our amazing features</p>
+            <!-- Scroll Arrow -->
+            <a href="#next-section" class="scroll-arrow d-block mt-3">
+                <img src="{% static 'images/down-arrow.svg' %}" alt="Scroll Down" width="50">
+            </a>
+        </div>
+    </div>
+    
+    <!-- Next Section -->
+    <div id="next-section" class="container py-5">
+        <h2>Discover More</h2>
+        <p>Here is the next section after the video. Add your content here.</p>
+    </div>
+
+    <script>
+        {% static 'js/index.js' %}
+    </script>
+{% endblock %}
