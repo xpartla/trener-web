@@ -65,3 +65,154 @@
     object-fit: cover;
     max-height: 350px;
 }
+
+/* Video Section */
+.video-section {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.video-container-polygon.polygon-crop {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+
+.video-container-polygon video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.video-container-polygon:hover video {
+    transform: scale(1.1);
+}
+
+.text-section {
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.text-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-section p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.text-section .cta-btn {
+    margin-bottom: 1rem;
+}
+
+.contact-phone {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Three Columns Section */
+.three-columns .column-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+
+.interactive-card {
+    width: 100%; /* Ensures the card takes full width of its column */
+    margin: 1rem 0; /* Adds spacing for stacked layout on small screens */
+    position: relative; /* Prevents cards from overlapping */
+    perspective: 1000px; /* Retains 3D effect */
+}
+
+.interactive-card .front,
+.interactive-card .back {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    background: #f8f9fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.interactive-card .front {
+    transform: rotateY(0deg);
+}
+
+.interactive-card .back {
+    transform: rotateY(180deg);
+}
+
+.interactive-card:hover .front {
+    transform: rotateY(180deg);
+}
+
+.interactive-card:hover .back {
+    transform: rotateY(0deg);
+}
+
+@media (max-width: 768px) {
+    .interactive-card {
+        margin-bottom: 2rem;
+        perspective: none; /* Disable 3D on small screens for simplicity */
+    }
+
+    .interactive-card .front,
+    .interactive-card .back {
+        position: relative;
+        transform: none; /* Disable flip on small screens */
+        backface-visibility: visible;
+        height: auto; /* Adjust height for readability */
+    }
+
+    .interactive-card:hover .front,
+    .interactive-card:hover .back {
+        transform: none; /* No flipping on hover */
+    }
+    .interactive-card .back-title{
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .three-columns .row {
+        margin-bottom: 12rem; /* Adjust this value for your desired gap size */
+    }
+}
+
+
+/* Email Form Section */
+.email-form-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+
+form {
+    width: 50%;
+}
+
+#three-js-animation {
+    width: 50%;
+    height: 300px;
+}

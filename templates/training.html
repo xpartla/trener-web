@@ -4,3 +4,78 @@
 {% block title %}
 Training
 {% endblock %}
+
+{% block content %}
+<div class="video-section">
+    <div class="video-container-polygon polygon-crop">
+        <video autoplay muted loop>
+            <source src="{% static 'images/homepage_bg.mp4' %}" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="text-section">
+        <h1>Transform Your Fitness</h1>
+        <p>Personalized training tailored for your goals and fitness journey.</p>
+        <a href="#" class="btn btn-primary cta-btn">Schedule Training</a>
+        <p class="contact-phone">Call: +123-456-7890</p>
+    </div>
+</div>
+
+<div class="container three-columns">
+    <div class="row">
+        <div class="col-12 col-md-4 mb-4">
+            <div class="interactive-card">
+                <div class="front">
+                    <h5>Entry Consultation</h5>
+                    <p>Understand your goals and fitness level.</p>
+                </div>
+                <div class="back">
+                    <h5 class="back-title">Details</h5>
+                    <p>Includes health assessment and fitness planning.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mb-4">
+            <div class="interactive-card">
+                <div class="front">
+                    <h5>First Training</h5>
+                    <p>Introduction to your personalized workout plan.</p>
+                </div>
+                <div class="back">
+                    <h5 class="back-title">Details</h5>
+                    <p>Hands-on guidance to learn exercises and techniques.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4 mb-4">
+            <div class="interactive-card">
+                <div class="front">
+                    <h5>Continuous Cooperation</h5>
+                    <p>Your path to fitness transformation.</p>
+                </div>
+                <div class="back">
+                    <h5 class="back-title">Details</h5>
+                    <p>Regular check-ins and adaptable training programs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="email-form-section">
+    <form>
+        <h2>Contact Me</h2>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Your Name" />
+        </div>
+        <div class="form-group">
+            <input type="email" class="form-control" placeholder="Your Email" />
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
+    <canvas id="three-js-animation"></canvas>
+</div>
+
+    <script src="{% static 'js/threejs-cubes.js' %}" defer></script>
+{% endblock %}
