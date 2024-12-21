@@ -1,12 +1,25 @@
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 300, 0.1, 1000);
+//const camera = new THREE.PerspectiveCamera(75, window.innerWidth / 300, 0.1, 1000);
+const canvas = document.getElementById("three-js-animation");
 const renderer = new THREE.WebGLRenderer({
-    canvas: document.getElementById("three-js-animation"),
+    canvas: canvas,
     alpha: true,
     antialias: true
 });
+const renderWidth = canvas.clientWidth;
+const renderHeight = canvas.clientHeight;
+renderer.setSize(renderWidth, renderHeight, false);
 renderer.setClearColor(0x000000, 0);
-renderer.setSize(window.innerWidth / 2, 200);
+const camera = new THREE.PerspectiveCamera(75, renderWidth / renderHeight, 0.1, 1000);
+camera.position.z = 5;
+window.addEventListener("resize", () => {
+    const newWidth = canvas.clientWidth;
+    const newHeight = canvas.clientHeight;
+
+    renderer.setSize(newWidth, newHeight, false);
+    camera.aspect = newWidth / newHeight;
+    camera.updateProjectionMatrix();
+});
 
 const cubes = [];
 const numCubes = 7;
