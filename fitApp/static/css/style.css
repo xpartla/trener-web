@@ -79,7 +79,7 @@
     position: relative;
     width: 50%;
     height: 100%;
-    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(25% 0, 90% 0, 90% 100%, 0% 100%);
     overflow: hidden;
 }
 
@@ -205,14 +205,77 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: 4rem 2rem 2rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
+/* Form Styling */
 form {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-#three-js-animation {
-    width: 50%;
-    height: 300px;
+form h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6392;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    color: #333;
+    background: #fffcfd;
+    border: 2px solid #ffd1d9;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #ff6392;
+    box-shadow: 0 4px 10px rgba(255, 99, 146, 0.2);
+}
+
+/* Button Styling */
+.email-form-section .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #ff6392;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(255, 99, 146, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.email-form-section .btn:hover {
+    background: #ff7aab;
+    box-shadow: 0 6px 12px rgba(255, 122, 171, 0.5);
+}
+
+canvas#three-js-animation {
+    width: 40%;
+    height: 100%;
+    background: #ffe9ec;
+    border-radius: 15px;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.05);
 }
