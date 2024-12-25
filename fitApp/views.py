@@ -13,7 +13,20 @@ def show_diet(request):
     return render(request, 'diet.html')
 
 def show_training(request):
-    return render(request, 'training.html')
+    target_groups = [
+        {"name": "Beginners"},
+        {"name": "Advanced"},
+        {"name": "Yoga Enthusiasts"},
+        {"name": "Weightlifters"},
+        {"name": "Cardio Fans"},
+        {"name": "Runners"},
+        {"name": "Bodybuilders"},
+        {"name": "Senior Citizens"},
+        {"name": "Kids & Teens"},
+        {"name": "Special Needs"},
+    ]
+    context = {"target_groups": target_groups}
+    return render(request, 'training.html', context)
 
 def show_coaching(request):
     return render(request, 'coaching.html')

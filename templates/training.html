@@ -21,6 +21,26 @@ Training
     </div>
 </div>
 
+    <div class="container tile-box">
+        <div>
+            <h2>Are you fit for this service?</h2>
+        </div>
+        <div class="container dynamic-tiles">
+            <div class="tile-container">
+                {% for group in target_groups %}
+                <div class="tile">
+                    <h5>{{ group.name }}</h5>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="cta">
+            <p>Personal trainings range from $15 a training (60-90 minutes), more info in the pricelist section</p>
+            <a href="#" class="btn">Price</a>
+        </div>
+    </div>
+
+
 <div class="container three-columns">
     <div class="row">
         <div class="col-12 col-md-4 mb-4">
