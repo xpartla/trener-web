@@ -4,3 +4,62 @@
 {% block title %}
 Diet Plans
 {% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="diet-main-text pt-5">
+                <h1>Jedálniček na mieru a poradenstvo ohľadom výživy v rôznych oblastiach</h1>
+            </div>
+            <div class="tile-box diet-tiles">
+                <div class="tile-container">
+                    <div class="tile">
+                        <h5>Lose Weight</h5>
+                    </div>
+                    <div class="tile">
+                        <h5>Gain Weight</h5>
+                    </div>
+                    <div class="tile">
+                        <h5>Athletes</h5>
+                    </div>
+                    <div class="tile">
+                        <h5>Digestion Issues</h5>
+                    </div>
+                    <div class="tile">
+                        <h5>Food Allergies</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow">
+                    <a href="#" class="scroll-arrow d-block mt-3">
+                        <img src="{% static 'images/down-arrow.svg' %}" alt="Scroll Down" width="50">
+                    </a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div id="dietCarousel" class="carousel slide diet-carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'images/gym1.jpg' %}" class="d-block w-100" alt="Gym Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/gym2.jpg' %}" class="d-block w-100" alt="Gym Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'images/gym3.jpg' %}" class="d-block w-100" alt="Gym Image 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#dietCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#dietCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/diet.js' %}" defer></script>
+{% endblock %}

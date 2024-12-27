@@ -65,10 +65,23 @@
 #gym-details h3 {
     margin-bottom: 1rem;
 }
-.carousel img {
+.gym-carousel img {
     border-radius: 8px;
     object-fit: cover;
     max-height: 350px;
+}
+
+.diet-carousel img{
+    max-height: 30rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px;
+}
+.diet-carousel .carousel-item:nth-child(odd) {
+    clip-path: polygon(0% 0%, 0% 100%, 24% 100%, 69% 0, 75% 0, 30% 100%, 100% 100%, 100% 0%);
+}
+.diet-carousel .carousel-item:nth-child(even){
+    clip-path: polygon(0% 0%, 0% 100%, 69% 100%, 24% 0, 30% 0, 75% 100%, 100% 100%, 100% 0%);
 }
 
 /* Video Section */
@@ -401,6 +414,19 @@ canvas#three-js-animation {
 .tile:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.diet-tiles{
+    transform: translate(0px, 100px);
+}
+
+.diet-main-text h1{
+    text-align: center;
+}
+
+.arrow{
+    display: flex;
+    justify-content: center;
 }
 
 .btn-placeholder{
