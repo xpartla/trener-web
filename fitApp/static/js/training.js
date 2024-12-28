@@ -20,4 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleActions: "play none none none" // Play the animation on scroll
         }
     });
+    gsap.from("#contact-section .col-12", {
+            duration: 0.8,
+            opacity: 0,
+            y: 50,
+            stagger: 0.2,
+            ease: "power2.out"
+        });
 });

@@ -14,16 +14,16 @@ def show_diet(request):
 
 def show_training(request):
     target_groups = [
-        {"name": "Beginners"},
-        {"name": "Advanced"},
-        {"name": "Yoga Enthusiasts"},
-        {"name": "Weightlifters"},
-        {"name": "Cardio Fans"},
-        {"name": "Runners"},
-        {"name": "Bodybuilders"},
-        {"name": "Senior Citizens"},
-        {"name": "Kids & Teens"},
-        {"name": "Special Needs"},
+        {"name": "Začiatočník"},
+        {"name": "Pokročilý"},
+        {"name": "Kulturistika"},
+        {"name": "Silový trojboj"},
+        {"name": "Nabranie hmotnosti"},
+        {"name": "Kondičná príprava"},
+        {"name": "Formovanie"},
+        {"name": "Fyzické testy"},
+        {"name": "Chudnutie"},
+        {"name": "Šport"},
     ]
     context = {"target_groups": target_groups}
     return render(request, 'training.html', context)
