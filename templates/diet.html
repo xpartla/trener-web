@@ -9,7 +9,8 @@ Diet Plans
     <div class="row">
         <div class="col-md-6">
             <div class="diet-main-text pt-5">
-                <h1>Jedálniček na mieru a poradenstvo ohľadom výživy v rôznych oblastiach</h1>
+                <h1 class="bungee-shade-regular">Jedálniček na mieru</h1>
+                <p>a poradenstvo ohľadom výživy v rôznych oblastiach</p>
             </div>
             <div class="tile-box diet-tiles">
                 <div class="tile-container">
@@ -31,7 +32,7 @@ Diet Plans
                 </div>
             </div>
             <div class="arrow">
-                    <a href="#" class="scroll-arrow d-block mt-3">
+                    <a href="#consult" class="scroll-arrow d-block mt-3">
                         <img src="{% static 'images/down-arrow.svg' %}" alt="Scroll Down" width="50">
                     </a>
             </div>
@@ -61,5 +62,51 @@ Diet Plans
         </div>
     </div>
 
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <div id="consult" class="container price-card">
+                <p class="section-title text-center">Úvodná konzultácia nestojí nič, len tvoj čas</p>
+                <div class="card p-4 mt-3 text-center">
+                    <p class="section-content">Spolupráca začína od:</p>
+                          <p class="section-title">$30/mes</p>
+                    <div class="divider"></div>
+                    <a href="#" class="btn cta-btn w-100">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="container diet-introduction">
+                <p class="section-title text-center">Ako prebieha úvodná konzultácia?</p>
+                <ul class="text-center section-content enhanced-list">
+                    <li><i class="fas fa-search"></i> <b>Analyzovanie</b> doterajších stravovacích návykov</li>
+                    <li><i class="fas fa-dumbbell"></i> <b>Zohľadnenie</b> úrovne fyzickej aktivity</li>
+                    <li><i class="fas fa-bullseye"></i> <b>Stanovenie</b> dosiahnuteľných cieľov</li>
+                    <li><i class="fas fa-question-circle"></i> <b>Zodpovedanie</b> akýchkoľvek otázok</li>
+                    <li><i class="fas fa-handshake"></i> <b>Nastavenie</b> nasledujúcej spolupráce</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="container diet-details">
+                <p class="text-center section-title">Čo obsahuje jedálniček?</p>
+                    <ul class=" text-center section-content enhanced-list">
+                        <li><i class="fas fa-utensils"></i> <b>Výživový plán</b> na mieru</li>
+                        <li><i class="fas fa-calendar-alt"></i> <b>Mesačné</b> konzultácie</li>
+                        <li><i class="fas fa-comments"></i> <b>Flexibiná</b> komunikácia</li>
+                        <li><i class="fas fa-pills"></i> <b>Poradenstvo</b> o výživových doplnkoch</li>
+                    </ul>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <p class="text-center section-title">Ako je jedalnicek zostaveny a co dostanem?</p>
+            <p class="section-content text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl lectus, congue sit amet felis eget, bibendum varius leo. Morbi eu felis vitae massa rutrum convallis. In sed egestas diam. Mauris tellus mi, sodales nec efficitur a, ullamcorper tristique quam. In congue aliquet eleifend. Vivamus in consectetur dui, in porta lorem.</p>
+        </div>
+    </div>
+
+    {% include "components/contact_form.html" %}
     <script src="{% static 'js/diet.js' %}" defer></script>
 {% endblock %}
+

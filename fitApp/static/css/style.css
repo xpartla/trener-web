@@ -1,3 +1,15 @@
+body{
+    font-family: "Quicksand", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bungee-shade-regular {
+  font-family: "Bungee Shade", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .video-container {
     position: relative;
     width: calc(100vw - 17px);
@@ -424,6 +436,16 @@ canvas#three-js-animation {
     text-align: center;
 }
 
+.diet-main-text p{
+    text-align: center;
+    font-size: 2rem;
+}
+.section-title{
+    font-size: 1.75rem;
+}
+.section-content{
+    font-size: 1.25rem;
+}
 .arrow{
     display: flex;
     justify-content: center;
@@ -447,4 +469,76 @@ canvas#three-js-animation {
 .index-about-section img{
     max-height: 16rem;
     width: auto;
+}
+.enhanced-list {
+    padding-left: 1.5rem;
+    list-style-type: none;
+}
+
+.enhanced-list li {
+    font-size: 1.25rem;
+    position: relative;
+    padding: 0.5rem 0;
+    margin-left: 1rem;
+    transform: translateX(-20px);
+    opacity: 1;
+}
+
+.enhanced-list li i {
+    color: #ff6392;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.enhanced-list li:hover {
+    color: #007bff;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+.coach-background{
+    background-color: lightpink;
+    border-radius: 30px;
+}
+
+.steps-carousel {
+    display: flex;
+    gap: 3rem;
+    overflow-x: auto;
+    padding: 1rem;
+    scroll-snap-type: x mandatory;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.step {
+    background: linear-gradient(135deg, #ff6392, #ff7aab);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    color: #fff;
+    flex: 0 0 auto; /* Maintain fixed width for each step */
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.step-title {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.step-content {
+    margin-top: 1rem;
+    font-size: 1rem;
 }

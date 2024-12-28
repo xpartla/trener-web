@@ -4,3 +4,60 @@
 {% block title %}
 Online Coaching
 {% endblock %}
+
+{% block content %}
+
+    <div class="row mt-3">
+        <div class="col-md-5">
+            <p class=" bungee-shade-regular section-title text-center">Ako funguje</p>
+            <h1 class="bungee-shade-regular text-center"> Online tréner ?</h1>
+            <p class="section-content">
+                Online coaching offers the flexibility and personalization you need to achieve your fitness goals,
+                anytime, anywhere. I’m here to guide you with tailored workouts, nutrition plans, and constant support.
+            </p>
+            <a href="#" class="btn btn-danger">Get Started Today</a>
+        </div>
+        <div class="col-md-7">
+            <div>
+                <ul class="section-content enhanced-list">
+                    <li><i class="fas fa-search"></i> <b>Flexibilita</b> - trénuj kedykoľvek a kdekoľvek</li>
+                    <li><i class="fas fa-bullseye"></i> <b>Tréningový plán</b> - nastavený pre teba a podľa tvojich cieľov</li>
+                    <li><i class="fas fa-question-circle"></i> <b>Nutričný plán</b> - podporujúci tvoj cieľ</li>
+                    <li><i class="fas fa-handshake"></i> <b>Suplementačný plán</b> - ideálne doplnenie stravy a tréningu</li>
+                    <li><i class="fas fa-bullseye"></i> <b>Online podpora</b> - pravidelné kontroly a konzultácie</li>
+                    <li><i class="fas fa-dumbbell"></i> <b>Dlhodobá spolupráca</b> - 1/3/6/12 mesačná spolupráca bez viazanosti</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-2">
+        <p class=" bungee-shade-regular section-title text-center">Ako začať?</p>
+        <div class="steps-carousel">
+            <div class="step mt-2 mb-2" data-step="1">
+                <div class="step-title">Prihlásiť sa</div>
+                <div class="step-content">Stačí vyplniť formulár, kde mi odovzdáš základné informácie o tebe a o tom, čo chceš dosiahnuť (nabrať, špecifické partie, schudnúť, kondičný tréning, športová príprava...)</div>
+            </div>
+            <div class="step mt-2 mb-2" data-step="2">
+                <div class="step-title">Konzultácia</div>
+                <div class="step-content">Prvá konzultácia je cca 30 min. hovor, kde chcem bližšie spoznať teba, priestory kde cvičíš, tvoje možnosti, obmedzenia a preferencie ako pri strave tak pri tréningu</div>
+            </div>
+            <div class="step mt-2 mb-2" data-step="3">
+                <div class="step-title">Dodržiavať plán</div>
+                <div class="step-content">Po konzultácii pre teba vypracujem tréningový a stravovací plán podľa tvojich možností a preferencií, tak aby si efektívne dosiahol svoje ciele</div>
+            </div>
+            <div class="step mt-2 mb-2" data-step="4">
+                <div class="step-title">Komunikácia</div>
+                <div class="step-content">Pravidelný feedback je dôležitý, 2x do mesiaca budeme mať progress report, a taktiež sa mi kedykoľvek môžeš ozvať ohľadom tréningu alebo stravy</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+
+    </div>
+
+
+    {% include "components/contact_form.html" %}
+    <script src="{% static 'js/coaching.js' %}" defer></script>
+{% endblock %}
