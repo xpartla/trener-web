@@ -1,0 +1,11 @@
+<h1>Body Parts</h1>
+<a href="{% url 'body_part_create' %}">Add New Body Part</a>
+<ul>
+    {% for body_part in body_parts %}
+    <li>
+        {{ body_part.name }}
+        <a href="{% url 'body_part_update' body_part.id %}">Edit</a>
+        <a href="{% url 'body_part_delete' body_part.id %}">Delete</a>
+    </li>
+    {% endfor %}
+</ul>

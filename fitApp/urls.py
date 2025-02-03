@@ -26,7 +26,10 @@ urlpatterns = [
     path('', views.show_index),
     path('diet/', views.show_diet),
     path('training/', views.show_training),
-    path('coaching/', views.show_coaching)
+    path('coaching/', views.show_coaching),
+    path('body_part/new/', views.body_part_create, name='body_part_create'),  # Create
+    path('body_part/<int:pk>/edit/', views.body_part_update, name='body_part_update'),  # Update
+    path('body_part/<int:pk>/delete/', views.body_part_delete, name='body_part_delete'),  # Delete
 ]
 
 if settings.DEBUG:
